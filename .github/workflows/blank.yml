@@ -1,0 +1,37 @@
+# This is a basic workflow to help you get started with Actions
+
+name:Abo Kadija
+
+# Controls when the workflow will run
+on:When: 
+  # Clouds
+  push:
+    branches: [ "Telegram" ]
+  pull_request:
+    branches: [ "Telegram" ]
+
+#When sending any message containing the name of a city or country
+  workflow_dispatch:
+
+# One job
+jobs:
+  # Travel bot
+  build:
+    # Telegram
+    runs-on: ubuntu-latest
+
+    # The bot's mission is to list information about the country or city mentioned and includes the answer: Best times to travel, travel requirements, tourist places, car rental offices, hotel prices, heritage sites, weather conditions, do you require a visa, exchange rate of the currency against the Saudi riyal, important laws, ticket prices, markets and cafes, regions of the country
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v4
+
+      # Runs a single command using the runners shell
+      - name: Run a one-line script
+        run: echo Hello, world!
+
+      # Runs a set of commands using the runners shell
+      - name: Run a multi-line script
+        run: |Best times to travel'Travel requirements'Tourist places'Car rental offices'Hotel prices'Heritage landmarks'Weather conditions'Do you require a visa'Exchange rate for the Saudi riyal'Important laws'Ticket prices'Markets and cafes'
+Regions of the country'
+          echo Add other actions to build,
+          echo test, and deploy your project.
